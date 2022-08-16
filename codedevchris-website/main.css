@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Titillium Web", sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  display: none;
+}
+
+.navbar {
+  background-color: #ffffff;
+  padding: 1em 0.5em;
+}
+.navbar .container {
+  display: flex;
+  place-content: space-between;
+}
+.navbar .container span {
+  color: #333eaa;
+}
+.navbar .container a {
+  color: #161616;
+  text-decoration: none;
+}
+.navbar .container .portfolio {
+  font-size: 1.5em;
+}
+.navbar .container img {
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.hero {
+  background-color: #030815;
+  background-image: url(images/heroimage.jpg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  overflow: hidden;
+}
+.hero .container {
+  display: flex;
+  flex-direction: column;
+}
+.hero .container .lower-col .headshot {
+  margin-bottom: -0.6em;
+  margin-left: 9em;
+  width: 250px;
+  height: 250px;
+  /* offset-x offset-y blur-radius color */
+  filter: drop-shadow(-12px 12px 25px);
+}
+.hero .container .top-col {
+  text-align: right;
+  margin-right: 1em;
+  padding-top: 2em;
+  font-size: 2em;
+  line-height: 2em;
+  filter: drop-shadow(-12px 12px 130px);
+}
+.hero .container .top-col span {
+  color: #333eaa;
+}
+
+.softskills-section {
+  color: #030815;
+  margin: 0;
+  margin-bottom: 2em;
+}
+.softskills-section .container .heading {
+  text-align: center;
+  margin-top: 0.5em;
+  font-size: 3em;
+  line-height: 1.2em;
+}
+.softskills-section .container .heading span {
+  color: #333eaa;
+}
+.softskills-section .container h2 {
+  margin-top: 0.5em;
+  font-size: 2.5em;
+  text-align: center;
+}
+.softskills-section .container h2 span {
+  color: #333eaa;
+}
+.softskills-section .container h4 {
+  margin-top: 0.5em;
+  font-size: 2.5em;
+  margin-left: 0.5em;
+  text-align: center;
+  margin-right: 0.5em;
+}
+.softskills-section .container h4 span {
+  color: #333eaa;
+}
+.softskills-section .container .whyhire {
+  margin-top: 1em;
+  font-size: 1.2em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.softskills-section .container .profskills {
+  margin: 0;
+  margin-top: 1em;
+  font-size: 1.2em;
+  padding-left: 0.1em;
+  padding: 0 2em 0 2em;
+  margin-bottom: -1em;
+  /* Bottom two lines will adjust the unordered list to fit the size of
+  the screen */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+}
+.softskills-section .container .profskills li {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  margin-left: 3em;
+  list-style: none;
+  position: relative;
+  font-weight: bold;
+  /* Use the sudo selector &:before to (only specific to scss) 
+  and transpiles in css to li:before */
+}
+.softskills-section .container .profskills li:before {
+  content: "";
+  /* Making a position absolute allows the positioning of an element
+  within the document */
+  position: absolute;
+  place-items: center;
+  /* Can use left because of absolute position that is relative 
+  to its parent element containing relative position*/
+  left: -1.5em;
+  top: 0.25em;
+  width: 25px;
+  height: 25px;
+  background-image: url("/images/bullets.svg");
+  background-size: contain;
+  border-radius: 5em;
+}
+.softskills-section .container .frontend .frontlangimg {
+  margin-top: 2em;
+  display: flex;
+  place-content: center;
+}
+.softskills-section .container .frontend .frontlangimg .htmlimg {
+  width: 7em;
+  height: 7em;
+  margin-left: 1em;
+}
+.softskills-section .container .frontend .frontlangimg .cssimg {
+  width: 7em;
+  height: 7em;
+  margin-left: 1em;
+}
+.softskills-section .container .frontend .frontlangimg .jsimg {
+  width: 7em;
+  height: 7em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.softskills-section .backend .backlangimg {
+  margin-top: 2em;
+  display: flex;
+  place-content: center;
+}
+.softskills-section .backend .backlangimg .pythonimg {
+  width: 7em;
+  height: 7em;
+  margin-left: 1em;
+}
+.softskills-section .backend .backlangimg .c-img {
+  width: 7em;
+  height: 7em;
+  margin-left: 1em;
+}/*# sourceMappingURL=main.css.map */

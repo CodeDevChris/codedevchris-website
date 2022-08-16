@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="navbar">
+
+        <div class="container">
+
+            <a href="#" class="portfolio">Port<span>folio</span></a>
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open Navigation">
+
+            <nav>
+
+                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation">
+
+                <ul class="primary-nav">
+
+                    <!-- Brief overview of who I am and what I do -->
+                    <!-- Hobbyist 8:30-->
+                    <li><a href = "#" class = "current">Home</a></li>
+                    <li><a href = "#">Development</a></li>
+                    <!-- Who I am and what I do (relevant towards what I want to do)
+                    what led me to web development, journey so far, where I want to go, 
+                    and some projects that have been my favorite -->
+                    <li><a href = "#">About</a></li>
+
+                </ul>
+
+                <ul class="secondary-nav">
+
+                    <!-- My skills and what I bring to the table, include contact form -->
+                    <li class = "hire-me"><a href = "#">Hire Me</a></li>
+
+                </ul>
+
+            </nav>
+        </div>
+    
+    </div>
+
+    <div class="hero">
+
+        <!-- This is going to be a divider that also has the class "container"-->
+        <div class="container">
+
+            <div class="top-col">
+                <h1>I'm Developer</h1>
+                <h1><span>Chris Diaz</span></h1>
+            </div>
+                
+            <div class="lower-col">
+                <h1></h1>
+                <img class="headshot" src="images/mypngheadshot.png" alt="Photo of Chris Diaz">
+            </div>
+
+        </div>
+
+    </div>
+
+    <section class="softskills-section">
+        <!-- This is going to be a divider that also has the class "container"-->
+        <div class="container">
+
+            <h1 class="heading">Why Choose <span>Me?</span></h1>
+
+            <div class="whyhire">
+
+                <p>I am a detail-oriented developer with a zest for solving complex problems. 
+                   Seeking to use proven project management, and design 
+                   skills to improve quality, cost, and time. Eager to offer 
+                   superb analytical and computer skills to help grow client bases, 
+                   and increase customer satisfaction.</p>
+
+            </div>
+
+            <h4>Professional<span> Skills</span></h4>
+
+            <div class="profskills">   
+
+                    <ul class="skills-list">
+
+                        <li>Strong Work Ethic</li>
+                        <li>Leadership Experience</li>
+                        <li>Problem Solver</li>
+                        <li>Self-Motivated</li>
+                        <li>Reliable</li>
+                        <li>Proficient in Microsoft Office and Adobe Photoshop</li>
+        
+                    </ul>
+
+                
+            </div>
+
+            <div class="frontend">
+
+                <h2>Front End<span> Skills</span></h2>
+
+                <div class="frontlangimg">
+
+                    <img class="htmlimg" src="images/htmlweb.png" alt="HTML Image">
+                    <img class="cssimg" src="images/cssweb.png" alt="CSS Image">
+                    <img class="jsimg" src="images/javascriptweb.png" alt="Javascript Image">
+
+                </div>
+
+                <div class="frontlangtext">
+
+
+                    
+                </div>
+
+
+            </div>
+
+            <div class="backend">
+
+                <h2>Back End <span>Skills</span></h2>
+
+                <div class="backlangimg">
+
+                    <img class="pythonimg" src="images/pythonweb.png" alt="Python Image">
+                    <img class="c-img" src="images/c-logo.png" alt="C++ Image">
+
+                </div>
+
+                <div class="backlangtext">
+                    
+
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+
+    </section>
+
+
+    <script>
+
+        const mobileBtn = document.getElementById("mobile-cta");
+        const nav = document.querySelector("nav");
+        const mobileBtnExit = document.getElementById("mobile-exit");
+
+       // The below fuction will hide the display when the hamburger is clicked
+        mobileBtn.addEventListener("click", () => {
+
+            nav.classList.add('menu-btn') // once clicked the menu will open
+
+        })
+
+        // The below fuction will hide the display when the x is clicked
+        mobileBtnExit.addEventListener("click", () => {
+
+            nav.classList.remove('menu-btn') // once clicked the menu will close
+
+        })
+
+    </script>    
+    
+</body>
+</html>
