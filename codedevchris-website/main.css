@@ -14,8 +14,47 @@ body {
   overflow-x: hidden;
 }
 
+.menu-btn {
+  display: block;
+}
+
 nav {
   display: none;
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background-image: url(images/chrismobilenav.jpg);
+  background-size: cover; /* Resize the background image to cover the entire container */
+  /* 100 viewport height means that its relative to the height of the 
+  device of the browser that your looking at */
+  height: 100vh;
+  padding: 1em;
+}
+nav ul.primary-nav {
+  margin-top: 5em;
+}
+nav li a {
+  color: white;
+  text-decoration: none;
+  /* Must put display block on a / hyperlink elements if you want
+  to add padding & margins etc */
+  display: block;
+  padding: 0.5em;
+  font-size: 1.3em;
+  text-align: right;
+  /* *** IMPORTANT *** This makes it so that when you hover over
+  items, the items turn bold when hovered over*/
+}
+nav li a:hover {
+  font-weight: bold;
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: 0.5em;
+  cursor: pointer;
 }
 
 .navbar {
@@ -30,7 +69,7 @@ nav {
   color: #333eaa;
 }
 .navbar .container a {
-  color: #161616;
+  color: black;
   text-decoration: none;
 }
 .navbar .container .portfolio {
@@ -53,6 +92,9 @@ nav {
   display: flex;
   flex-direction: column;
 }
+.hero .container .lower-col {
+  text-align: center;
+}
 .hero .container .lower-col .headshot {
   margin-bottom: -0.6em;
   margin-left: 9em;
@@ -66,7 +108,7 @@ nav {
   margin-right: 1em;
   padding-top: 2em;
   font-size: 2em;
-  line-height: 2em;
+  line-height: 2.3em;
   filter: drop-shadow(-12px 12px 130px);
 }
 .hero .container .top-col span {
@@ -76,19 +118,21 @@ nav {
 .softskills-section {
   color: #030815;
   margin: 0;
-  margin-bottom: 2em;
+}
+.softskills-section .container .background-container {
+  background-color: #333eaa;
+  padding-bottom: 1em;
 }
 .softskills-section .container .heading {
   text-align: center;
-  margin-top: 0.5em;
   font-size: 3em;
   line-height: 1.2em;
+  margin-top: 0.4em;
 }
 .softskills-section .container .heading span {
   color: #333eaa;
 }
 .softskills-section .container h2 {
-  margin-top: 0.5em;
   font-size: 2.5em;
   text-align: center;
 }
@@ -96,7 +140,7 @@ nav {
   color: #333eaa;
 }
 .softskills-section .container h4 {
-  margin-top: 0.5em;
+  margin-top: 0.4em;
   font-size: 2.5em;
   margin-left: 0.5em;
   text-align: center;
@@ -117,7 +161,6 @@ nav {
   font-size: 1.2em;
   padding-left: 0.1em;
   padding: 0 2em 0 2em;
-  margin-bottom: -1em;
   /* Bottom two lines will adjust the unordered list to fit the size of
   the screen */
   display: grid;
@@ -149,39 +192,68 @@ nav {
   background-size: contain;
   border-radius: 5em;
 }
+.softskills-section .container .frontend {
+  padding-top: 1em;
+}
 .softskills-section .container .frontend .frontlangimg {
   margin-top: 2em;
   display: flex;
-  place-content: center;
+  place-content: space-around;
 }
 .softskills-section .container .frontend .frontlangimg .htmlimg {
   width: 7em;
   height: 7em;
-  margin-left: 1em;
 }
 .softskills-section .container .frontend .frontlangimg .cssimg {
   width: 7em;
   height: 7em;
-  margin-left: 1em;
 }
 .softskills-section .container .frontend .frontlangimg .jsimg {
   width: 7em;
   height: 7em;
-  margin-left: 1em;
   margin-right: 1em;
+}
+.softskills-section .container .frontend .frontlangtext {
+  margin-top: 1em;
+  display: flex;
+  place-content: space-around;
+}
+.softskills-section .container .frontend .frontlangtext .csstext {
+  margin-left: 0.6em;
+}
+.softskills-section .backend {
+  padding-top: 1em;
 }
 .softskills-section .backend .backlangimg {
   margin-top: 2em;
   display: flex;
-  place-content: center;
+  place-content: space-around;
 }
 .softskills-section .backend .backlangimg .pythonimg {
   width: 7em;
   height: 7em;
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 .softskills-section .backend .backlangimg .c-img {
   width: 7em;
   height: 7em;
-  margin-left: 1em;
+  margin-right: 1em;
+}
+.softskills-section .backend .backlangtext {
+  margin-top: 1em;
+  display: flex;
+  place-content: space-around;
+  margin-right: 1.5em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .hero .container .lower-col .headshot {
+    margin-bottom: -0.6em;
+    margin-left: 12em;
+    margin-top: -5em;
+    width: 475px;
+    height: 475px;
+    /* offset-x offset-y blur-radius color */
+    filter: drop-shadow(-12px 12px 25px);
+  }
 }/*# sourceMappingURL=main.css.map */

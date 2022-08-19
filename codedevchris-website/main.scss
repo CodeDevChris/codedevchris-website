@@ -21,11 +21,76 @@ body
 
 }
 
+.menu-btn
+{
+
+    display: block;
+
+}
 
 nav
 {
 
+    // Needs to have display none for javascript to work
     display: none;
+    position: fixed;
+    // Can be placed on properties / elements using position fixed & absolute
+    // Makes the menu sit on top of everything
+    z-index: 999;
+    width: 66%;
+    // Pushes the items to the right
+    right: 0;
+    // Pushes the items to the very top of doc
+    top: 0;
+    background-image: url(images/chrismobilenav.jpg);
+    background-size: cover; /* Resize the background image to cover the entire container */
+    /* 100 viewport height means that its relative to the height of the 
+    device of the browser that your looking at */
+    height: 100vh;
+    padding: 1em;
+
+    ul.primary-nav
+    {
+
+        margin-top: 5em;
+
+    }
+
+    li
+    {
+
+        a
+        {
+
+            color: white;
+            text-decoration: none;
+            /* Must put display block on a / hyperlink elements if you want
+            to add padding & margins etc */
+            display: block;
+            padding: .5em;
+            font-size: 1.3em;
+            text-align: right;
+
+            /* *** IMPORTANT *** This makes it so that when you hover over
+            items, the items turn bold when hovered over*/
+            &:hover
+            {
+
+                font-weight: bold;
+
+            }
+        }
+
+    }
+
+}
+
+.mobile-menu-exit
+{
+    // to push items rather than text use float
+    float: right;
+    margin: .5em;
+    cursor: pointer;
 
 }
 
@@ -37,6 +102,7 @@ nav
 
     .container
     {
+
         display: flex;
         place-content: space-between;
 
@@ -50,7 +116,7 @@ nav
         a
         {
 
-            color: #161616;
+            color: black;
             text-decoration: none;
     
         }
@@ -93,6 +159,8 @@ nav
         .lower-col
         {
         
+            text-align: center;
+
             .headshot
             {
 
@@ -114,7 +182,7 @@ nav
             margin-right: 1em;
             padding-top: 2em;
             font-size: 2em;
-            line-height: 2em;
+            line-height: 2.3em;
             filter: drop-shadow(-12px 12px 130px);
             
             span
@@ -134,18 +202,25 @@ nav
 
     color: #030815;
     margin: 0;
-    margin-bottom: 2em;
     
     .container
     {
+
+        .background-container
+        {
+
+            background-color: #333eaa;
+            padding-bottom: 1em;
+
+        }
         
         .heading
         {
        
             text-align: center;
-            margin-top: .5em;
             font-size: 3em;
             line-height: 1.2em;
+            margin-top: .4em;
             
             span
             {
@@ -158,8 +233,7 @@ nav
 
         h2
         {
-    
-            margin-top: .5em;
+           
             font-size: 2.5em;
             text-align: center;
             
@@ -175,7 +249,7 @@ nav
         h4
         {
     
-            margin-top: .5em;
+            margin-top: .4em;
             font-size: 2.5em;
             margin-left: .5em; 
             text-align: center;
@@ -207,9 +281,7 @@ nav
             margin-top: 1em;
             font-size: 1.2em;
             padding-left: .1em;
-            padding: 0 2em 0 2em;
-            margin-bottom: -1em;
-            
+            padding: 0 2em 0 2em;     
             /* Bottom two lines will adjust the unordered list to fit the size of
             the screen */
             display: grid;
@@ -217,7 +289,7 @@ nav
         
             li
             {
-        
+                
                 font-size: 1.1em;
                 margin-bottom: 1em;
                 margin-left: 3em;
@@ -258,20 +330,21 @@ nav
         .frontend
         {        
 
+            padding-top: 1em;
+
             .frontlangimg
             {
 
                 margin-top: 2em;
                 display: flex;
-                place-content: center;
+                place-content: space-around;
                 
                 .htmlimg
                 {
             
                     width: 7em;
                     height: 7em;
-                    margin-left: 1em;
-            
+                    
                 }
 
                 .cssimg
@@ -279,7 +352,6 @@ nav
             
                     width: 7em;
                     height: 7em;
-                    margin-left: 1em;
                           
                 }
 
@@ -288,11 +360,26 @@ nav
             
                     width: 7em;
                     height: 7em;
-                    margin-left: 1em;
                     margin-right: 1em;
             
                 }
 
+            }
+
+            .frontlangtext
+            {
+
+                margin-top: 1em;
+                display: flex;
+                place-content: space-around;
+               
+                .csstext
+                {
+
+                    margin-left: .6em;
+
+                }
+                
             }
 
         }
@@ -302,20 +389,22 @@ nav
     .backend
     {     
         
+        padding-top: 1em;
+
         .backlangimg
         {
 
             margin-top: 2em;
             display: flex;
-            place-content: center;
+            place-content: space-around;
             
             .pythonimg
             {
         
                 width: 7em;
                 height: 7em;
-                margin-left: 1em;
-        
+                margin-left: .5em;
+
             }
 
             .c-img
@@ -323,15 +412,57 @@ nav
         
                 width: 7em;
                 height: 7em;
-                margin-left: 1em;            
+                margin-right: 1em;        
         
             }
 
+        }
+
+        .backlangtext
+        {
+
+            margin-top: 1em;
+            display: flex;
+            place-content: space-around;
+            margin-right: 1.5em;  
+            
         }
 
     }
 
 }
     
+@media only screen and (min-width: 1000px)
+{
 
+    .hero
+    {   
+    
+        .container
+        {
+
+            .lower-col
+            {
+
+    
+                .headshot
+                {
+    
+                    margin-bottom: -.6em;
+                    margin-left: 12em;
+                    margin-top: -5em;
+                    width: 475px;
+                    height: 475px;
+                    /* offset-x offset-y blur-radius color */
+                    filter: drop-shadow(-12px 12px 25px );          
+    
+                }
+    
+            }
+    
+        }
+    
+    }
+    
+}
 
